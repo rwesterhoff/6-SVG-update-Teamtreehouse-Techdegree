@@ -1,0 +1,81 @@
+/*Header*/
+
+header {
+    padding-top: 10px;
+    nav {
+        padding-bottom: 50px;
+        text-align: left;
+        ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+    }
+}
+
+h1 {
+    line-height: 1em;
+}
+
+.logo {
+    width: 140px;
+    height: 120px;
+    &-text {
+        fill: $tacao;
+        @include delay-inc-similar(.6s, .05s, path, 15);
+    }
+    &-background {
+        fill: $muddy-waters;
+    }
+    &-paw {
+        fill: $manhattan;
+        @include delay-inc-similar(.2s, .1s, path, 4);
+    }
+}
+
+.logo path,
+.logo {
+    @extend %img_animate;
+}
+
+#icon-heart,
+#icon-location,
+#icon-contact {
+    @extend %nav-icons;
+}
+
+.shape {
+    fill: $color-links;
+}
+
+li:hover {
+    .shape {
+        fill: $color-hover;
+    }
+    #icon-heart {
+        animation-name: beat;
+    }
+    #icon-location {
+        animation-name: swing;
+    }
+    #icon-contact {
+        animation-name: bubble;
+    }
+    #icon-heart,
+    #icon-location,
+    #icon-contact {
+        @extend %nav-icons_animate;
+    }
+}
+
+.mobile-only {
+    display: none;
+}
+
+@include brk-points(mobile) {
+    .mobile-only {
+        display: block;
+    }
+    header .logo .logo-text {
+        display: none;
+    }
+}

@@ -1,0 +1,49 @@
+/*Animations and transitions*/
+
+@keyframes beat {
+    from {
+        transform: scale(1)
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    50% {
+        transform: scale(1)
+    }
+}
+
+@keyframes swing {
+    12.5% {
+        transform: rotate(0) translateX(0) scale(1) skew(-15deg, 0deg) translateX(15%)
+    }
+    37.5% {
+        transform: rotate(0) translateX(0) scale(1) skew(15deg, 0deg) translateX(-15%)
+    }
+    50% {
+        transform: rotate(0) translateX(0) scale(1) skew(0deg, 0deg) translateX(0)
+    }
+}
+
+@keyframes bubble {
+    from {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(-1, 1);
+    }
+    50% {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes grow {
+    50% {
+        transform: scale(1.2);
+    }
+    75% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

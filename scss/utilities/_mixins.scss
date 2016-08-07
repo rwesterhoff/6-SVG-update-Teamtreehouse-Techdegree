@@ -1,0 +1,38 @@
+// Animation delay on similar elements
+@mixin delay-inc-similar($start, $increment, $item, $amount) {
+    @for $i from 1 through $amount {
+        #{$item}:nth-of-type(#{$i}) {
+            animation-delay: $start + ($increment*$i);
+        }
+    }
+}
+
+// Animation delay on unique elements
+@mixin delay-inc-unique($start, $increment, $list...) {
+    $i: 0;
+    @each $item in $list {
+        $i: $i + 1;
+        #{$item} {
+            animation-delay: $start + ($increment*$i);
+        }
+    }
+}
+
+// Breakpoints
+@mixin brk-points($section) {
+    @if $section=='mobile' {
+        @media screen and (max-width: $brk-small) {
+            @content;
+        }
+    }
+    @else if $section=='tablet' {
+        @media screen and (min-width: $brk-medium + 1) {
+            @content;
+        }
+    }
+    @else if $section=='desktop' {
+        @media screen and (min-width: $brk-large + 1) {
+            @content;
+        }
+    }
+}

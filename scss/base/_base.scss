@@ -1,0 +1,36 @@
+/*Base*/
+
+body {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: $color-txt;
+    background: url('#{$img-path}/background.svg') $color-background;
+    background-size: 53px 50px;
+}
+
+#container {
+    max-width: 960px;
+    margin: 0 auto;
+    background: $color-container;
+}
+
+p {
+    line-height: 2em;
+    max-width: 350px;
+    margin: 35px auto 0;
+    text-align: left;
+}
+
+a {
+    font-weight: 700;
+    text-decoration: none;
+    color: $color-links;
+}
+
+li:hover a {
+    color: $color-hover;
+}
+

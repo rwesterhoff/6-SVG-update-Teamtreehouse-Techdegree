@@ -1,0 +1,20 @@
+/* Shared styles */
+
+%nav-icons {
+    display: inline;
+    transform-origin: 50% 50%;
+    width: 14px;
+    height: 14px;
+}
+
+%nav-icons_animate {
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+%img_animate {
+    transform-origin: center;
+    transform: scale(0);
+    animation: grow .3s linear forwards;
+}

@@ -1,0 +1,25 @@
+/*Main content*/
+
+main {
+    padding-top: 50px;
+    h2 {
+        font-size: 28px;
+    }
+    ul {
+        padding: 0;
+    }
+    li {
+        display: inline-block;
+        margin-right: 20px;
+        color: $muddy-waters;
+        &:last-child {
+            margin-right: 0;
+        }
+        span {
+            margin-left: -40px;
+        }
+        svg {
+            margin-bottom: 15px;
+        }
+    }
+}
